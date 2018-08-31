@@ -1,8 +1,8 @@
 {
   "开发指南": [
     {
-      "name": "giud",
-      "path": "/giud",
+      "name": "guid",
+      "path": "/guid",
       "desc": "介绍"
     },
     {
@@ -68,11 +68,6 @@
           "path": "/limit"
         },
         {
-          "desc": "metaInfo 三要素",
-          "name": "meta-info",
-          "path": "/meta-info"
-        },
-        {
           "desc": "alert 警告",
           "name": "alert",
           "path": "/alert"
@@ -81,11 +76,6 @@
           "desc": "LoadingBar 加载进度条",
           "name": "loading-bar",
           "path": "/loadingBar"
-        },
-        {
-          "desc": "skeleton 骨架屏",
-          "name": "skeleton",
-          "path": "/skeleton"
         }
       ]
     }

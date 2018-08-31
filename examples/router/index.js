@@ -25,6 +25,7 @@ let addComponent = (router) => {
 }
 addComponent(routes)
 
-export default new Router({
+const router = new Router({
   routes: routes
 })
+export default router

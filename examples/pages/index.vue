@@ -53,7 +53,7 @@ export default {
 .pg-index {
   .index-container {
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
     h2 {
       font-size: 36px;
     }

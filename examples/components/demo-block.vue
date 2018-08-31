@@ -31,9 +31,13 @@
 </script>
 
 <style lang="scss" type="text/scss">
+.docs-demo-wrapper {
+  margin: 30px 0;
+}
   .demo-container {
     transition: max-height .3s ease;
     overflow: hidden;
+    text-align: left;
   }
   .docs-demo {
     width: 100%;
