@@ -7,6 +7,7 @@ import router from './router/index'
 import bytUI from '../packages/index'
 import demoBlock from './components/demo-block.vue'
 import '../packages/theme-default/lib/index.css'
+import './assets/scss/index.scss'
 Vue.config.productionTip = false
 Vue.use(bytUI);
 Vue.component('demo-block', demoBlock)

@@ -64,9 +64,14 @@
 
   /* Font
   -------------------------- */
+  --font-path: 'fonts';
   --font-size-base: 14px;
+  --font-size-small: 13px;
+  --font-size-large: 18px;
   --font-color-base: var(--color-base-black);
   --font-color-disabled-base: #bbb;
+  --font-weight-primary: 500;
+  --font-line-height-primary: 24px;
 
   /* Size
   -------------------------- */
@@ -87,6 +92,7 @@
   /* Icon
   -------------------------- */
   --icon-color: #666;
+
 
   /* Checkbox
   -------------------------- */

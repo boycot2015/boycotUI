@@ -104,11 +104,11 @@ exports.createNotifierCallback = () => {
  * 增加 hljs 的 classname
  */
 exports.wrapCustomClass = function (render) {
-  return function (...args) {
-    return render(...args)
-      .replace('<code class="', '<code class="hljs ')
-      .replace('<code>', '<code class="hljs">')
-  }
+  return function() {
+    return render.apply(this, arguments)
+      .replace('<code v-pre class="', '<code class="hljs ')
+      .replace('<code>', '<code class="hljs">');
+  };
 }
 
 /**

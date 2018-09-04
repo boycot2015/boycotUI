@@ -1,0 +1,213 @@
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  .header {
+    line-height: 80px;
+    height: 80px;
+    overflow: hidden;
+    .container {
+      height: 80px;
+      margin: 0 auto;
+      width: 1200px;
+    }
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      box-sizing: border-box;
+      transform: translateX(-50%);
+      z-index: 99;
+      background: #fff;
+      box-shadow: 2px 1px 10px #f2f2f2;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      img {
+        width: 100%;
+      }
+    }
+    .website-name {
+      margin-left: 20px;
+      color: #00aeff;
+    }
+    .nav-list {
+      text-align: right;
+      li {
+        float: left;
+        a {
+          display: block;
+          padding: 0 22px;
+          color: #888;
+          &:hover {
+            color: #00aeff;
+          }
+          &.active{
+            color: #00aeff;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    width: 1200px;
+    margin: 50px auto;
+    position: relative;
+    .aside {
+      position: fixed;
+      top: 0;
+      padding-top: 80px;
+      width: 220px;
+      z-index: 98;
+      background: #fff;
+      line-height: 40px;
+      overflow: hidden;
+      .byt-scroll-container {
+        overflow: hidden;
+        overflow-y: auto;
+        margin-top: 20px;
+        // margin-right: -17px;
+        width: 240px;
+        max-height: 600px;
+        position: relative;
+        &:hover .byt-scroll-bar{
+          opacity: 1;
+        }
+      }
+      .byt-scroll-bar {
+        position: absolute;
+        right: 2px;
+        top: 0;
+        width: 6px;
+        z-index: 1;
+        height: 100%;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity .12s ease-out;
+        .byt-scrollbar__thumb {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 60px;
+          cursor: pointer;
+          border-radius: inherit;
+          background-color: hsla(220,4%,58%,.3);
+          transition: background-color .3s;
+        }
+      }
+      .list-item {
+        .item {
+          h3 {
+            padding: 0 20px;
+          }
+          .links {
+            p.title {
+              padding: 0 20px;
+            }
+            a {
+              font-size: 14px;
+            }
+            .title {
+              font-size: 16px;
+              a {
+                font-size: 16px;
+                color: #666;
+                &.active {
+                  color: #00aeff;
+                }
+              }
+            }
+          }
+          .details {
+            li {
+              padding: 0 20px;
+            }
+          }
+          a.active {
+            color: #00aeff;
+          }
+        }
+      }
+    }
+    .content {
+      width:100%;
+    }
+  }
+  .footer {
+    min-height: 260px;
+    background: #f5f5f5;
+    text-align: left;
+    padding: 20px 0;
+    dl {
+      dt {
+        font-size: 20px;
+        color: #333;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      dd {
+        color: #666;
+        line-height: 28px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.byt-doc-content {
+  width: calc(100% - 215px);
+  padding-left: 240px;
+  section {
+    padding: 20px;
+    h1,h2,h3,h4,h5{
+      line-height: 1.5;
+      font-weight: 400;
+      margin: 20px 0 10px;
+      color: #333;
+    }
+    a {
+      color: #00aeff;
+    }
+    p {
+      line-height: 40px;
+    }
+    ul {
+      padding: 15px 0;
+      background-color: #f5f7fa;
+      li {
+        color: #34495e;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 5px 0 5px 20px;
+        padding-left: 15px;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 6px;
+          height: 6px;
+          margin-top: 8px;
+          border-radius: 50%;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          background: #00aeff;
+        }
+      }
+    }
+    h3 {
+      font-size: 22px;
+      margin-top: 45px;
+    }
+    .img {
+      text-align: center;
+      img {
+        width: 180px;
+      }
+    }
+  }
+}

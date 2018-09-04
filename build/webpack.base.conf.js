@@ -4,6 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const striptags = require('./strip-tags.js')
+const md = require('markdown-it')();
 const MarkdownItContainer = require('markdown-it-container');
 const vueMarkdown = {
   preprocess: (MarkdownIt, source) => {
@@ -17,27 +18,38 @@ const vueMarkdown = {
     [MarkdownItContainer, 'demo', {
       // 用于校验包含demo的代码块
       validate: params => params.trim().match(/^demo\s*(.*)$/),
-      render: function(tokens, idx) {
-         
+      render: function (tokens, idx) {
+
         var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
- 
+        jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle));
         if (tokens[idx].nesting === 1) {
-          var desc = tokens[idx + 2].content;
+          var description = (m && m.length > 1) ? m[1] : '';
+          var content = tokens[idx + 1].content;
           // 编译成html
-          const html = utils.convertHtml(striptags(tokens[idx + 1].content, 'script'))
+          var html = utils.convertHtml(striptags.strip(content, ['script', 'style'])).replace(/(<[^>]*)=""(?=.*>)/g, '$1');
+          var script = striptags.fetch(content, 'script');
+          var style = striptags.fetch(content, 'style');
+          var jsfiddle = { html: html, script: script, style: style };
+          var descriptionHTML = description
+            ? md.render(description)
+            : '';
+
           // 移除描述，防止被添加到代码块
-          tokens[idx + 2].children = [];
- 
-          return `<demo-block>
+          tokens[idx + 1].children = [];
+          jsfiddle = md.utils.escapeHtml(JSON.stringify(jsfiddle));
+
+
+          return `<demo-block :jsfiddle="${jsfiddle}">
                         <div slot="desc">${html}</div>
-                        <div slot="highlight">`;
+                        ${descriptionHTML}
+                        <div class="highlight" slot="highlight">`;
         }
         return '</div></demo-block>\n';
       }
     }]
   ]
 }
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 

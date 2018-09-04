@@ -12,7 +12,7 @@
             </div>
             <p class="name">指南</p>
             <p class="desc">了解设计指南，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。</p>
-            <a href="" class="details">查看详情</a>
+            <a href="#/guid" class="details">查看详情</a>
           </div>
         </li>
         <li>
@@ -22,7 +22,7 @@
             </div>
             <p class="name">组件</p>
             <p class="desc">使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。</p>
-            <a href="" class="details">查看详情</a>
+            <a href="#/guid" class="details">查看详情</a>
           </div>
         </li>
         <li>
@@ -66,11 +66,14 @@ export default {
       li {
         float: left;
         width: 30%;
-        margin: 0 20px;
+        margin-right: 5%;
         transform: translateY(0);
         transition: all 0.3s;
         &:hover {
           transform: translateY(-5px);
+        }
+        &:last-child{
+          margin-right: 0;
         }
         .item {
           height: 440px;

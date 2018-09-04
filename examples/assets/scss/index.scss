@@ -1,2 +1,6 @@
 
-@import "../../../node_modules/highlight.js/styles/color-brewer.css";
+// @import "../../../node_modules/highlight.js/styles/color-brewer.css";
+@import './base/layout.scss';
+@import './base/base.scss';
+// 组件
+@import './components/demo-block.scss';
