@@ -29,6 +29,14 @@
   <byt-button type="warning" round>警告按钮</byt-button>
   <byt-button type="danger" round>危险按钮</byt-button>
 </div>
+<ul style="margin:30px 0;width:250px;height:30px;white-space: nowrap;overflow:hidden;text-overflow:ellipsis;">
+  <li style="display:inline;" round>圆形按钮</li>
+  <li style="display:inline;" type="primary">主要按钮</li>
+  <li style="display:inline;" type="success">成功按钮</li>
+  <li style="display:inline;" type="info">信息按钮</li>
+  <li style="display:inline;" type="warning">警告按钮</li>
+  <li style="display:inline;" type="danger">危险按钮</li>
+</ul>
 
 ::: demo
 
@@ -107,21 +115,21 @@
 
 带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。 设置icon属性即可，icon 的列表可以参考 Boycot-UI 的 icon 组件，也可以设置在文字右边的 icon ，只要使用i标签即可，可以使用自定义图标。
 
-<byt-button icon="w-icon-tag" type="primary"></byt-button>
-<byt-button icon="w-icon-close" type="primary"></byt-button>
-<byt-button icon="w-icon-smile" type="primary"></byt-button>
-<byt-button icon="w-icon-search" type="primary">搜索
+<byt-button icon="byt-icon-document" type="primary"></byt-button>
+<byt-button icon="byt-icon-close" type="primary"></byt-button>
+<byt-button icon="byt-icon-setting" type="primary"></byt-button>
+<byt-button icon="byt-icon-search" type="primary">搜索
 </byt-button>
-<byt-button icon="w-icon-cloudfill" type="primary">下载</byt-button>
+<byt-button icon="byt-icon-download" type="primary">下载</byt-button>
 
 :::demo
 ```html
-<byt-button icon="w-icon-tag" type="primary"></byt-button>
-<byt-button icon="w-icon-close" type="primary"></byt-button>
-<byt-button icon="w-icon-smile" type="primary"></byt-button>
-<byt-button icon="w-icon-search" type="primary">搜索
+<byt-button icon="byt-icon-document" type="primary"></byt-button>
+<byt-button icon="byt-icon-close" type="primary"></byt-button>
+<byt-button icon="byt-icon-setting" type="primary"></byt-button>
+<byt-button icon="byt-icon-search" type="primary">搜索
 </byt-button>
-<byt-button icon="w-icon-cloudfill" type="primary">下载</byt-button>
+<byt-button icon="byt-icon-download" type="primary">下载</byt-button>
 ```
 :::
 

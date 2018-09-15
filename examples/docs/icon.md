@@ -9,7 +9,7 @@
     }
   }
 </script>
-<style>
+<style lang="scss">
   .demo-icon .source > i {
     color: #606266;
     margin: 0 20px;
@@ -21,14 +21,16 @@
     margin: 0 20px;
   }
 
-  .page-component .content > ul.icon-list {
+  .byt-doc-content section ul.icons-list {
     overflow: hidden;
     list-style: none;
     padding: 0;
+    background:#fff;
     border: solid 1px #eaeefb;
     border-radius: 4px;
   }
-  .icon-list li {
+  .byt-doc-content section ul.icons-list li {
+    margin:0;
     float: left;
     width: 16.66%;
     text-align: center;
@@ -37,14 +39,14 @@
     color: #666;
     font-size: 13px;
     transition: color .15s linear;
-
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
     margin-right: -1px;
     margin-bottom: -1px;
-
     @utils-vertical-center;
-
+    &:after {
+      height:0;
+    }
     span {
       display: inline-block;
       line-height: normal;
@@ -78,7 +80,7 @@
 
 ### 使用方法
 
-直接通过设置类名为 `byt-icon-iconName` 来使用即可。例如：
+直接通过设置类名为 byt-icon-iconName 来使用即可。例如：
 
 :::demo
 ```html
@@ -92,7 +94,7 @@
 
 ### 图标集合
 
-<ul class="icon-list">
+<ul class="icons-list clearfix">
   <li v-for="name in icons" :key="name">
     <span>
       <i :class="'byt-icon-' + name"></i>

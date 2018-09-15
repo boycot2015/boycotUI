@@ -19,5 +19,7 @@
     "gulp-postcss": "^6.1.1",
     "postcss-salad": "^1.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-font-spider": "^0.3.6"
+  }
 }

@@ -19,6 +19,7 @@
             </router-link>
           </li>
         </ul>
+        
       </div>
     </div>
     <div class="container clearfix" :style="hasAside?'margin-top:80px;':''">
@@ -70,6 +71,7 @@
 </template>
 
 <style type="text/scss" lang="scss">
+
 </style>
 <script>
 import navData from "./nav.config.json";
@@ -84,7 +86,8 @@ export default {
         { name: "资源", path: "/resource" },
         { name: "中文", path: "/language" }
       ],
-      activeRouter: {}
+      activeRouter: {},
+      isOver:false
     };
   },
   watch: {
@@ -103,7 +106,6 @@ export default {
         this.navData[key] = navData[key];
       }
     }
-    this.hasAside = true;
   },
   mounted() {
     var scrollContainer = this.$refs.scrollContainer;
