@@ -1,0 +1,65 @@
+@import "common/var.css";
+@b byt-tag {
+    display: inline-block;
+    padding:2px 5px;
+    line-height: normal;
+    border-radius: 3px;
+    font-size: 14px;
+    background: var(--color-gray);
+    color:var(--color-white);
+    @when plain {
+      border:1px solid var(--color-gray);
+      background:var(--color-gray);
+    }
+    @when round {
+      background:var(--color-gray);
+      border-radius:14px;
+      border: 1px solid var(--color-gray);
+    }
+  @m primary {
+    background:var(--color-primary);
+    @when plain {
+      border:1px solid var(--color-primary);
+      background:var(--color-white);
+      color: var(--color-primary);
+    }
+    @when round {
+      color:var(--color-primary);
+      background:var(--color-white);
+      border-radius:14px;
+      border: 1px solid var(--color-primary);
+    }
+  }
+  @m success {
+    background:var(--color-success);
+    @when plain {
+      border:1px solid var(--color-success);
+      background:var(--color-white);
+      color: var(--color-success);
+    }
+    @when round {
+      color:var(--color-success);
+      background:var(--color-white);
+      border-radius:14px;
+      border: 1px solid var(--color-success);
+    }
+  }
+  @m danger {
+    background:var(--color-danger);
+    @when plain {
+      border:1px solid var(--color-danger);
+      background:var(--color-white);
+      color: var(--color-danger);
+    }
+    @when round {
+      color:  var(--color-danger);
+      background:var(--color-white);
+      border-radius:14px;
+      border: 1px solid  var(--color-danger);
+    }
+  }
+}
+
+[class*='byt-hairline'] {
+  position: relative;
+}

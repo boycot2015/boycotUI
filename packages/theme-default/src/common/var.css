@@ -10,14 +10,18 @@
   --color-transition-base: color .2s cubic-bezier(.645,.045,.355,1);
 
   /* Colors
+  f54
+06bf04
+38f
   -------------------------- */
-  --color-primary: #00aeff;
+  --color-primary: #38f;
 
-  --color-success: #13ce66;
+  --color-success: #06bf04;
   --color-warning: #f7ba2a;
-  --color-danger: #ff4949;
+  --color-danger: #f54;
   --color-info: #50bfff;
   
+  --color-gray: #c9c9c9;  
   --color-close: #b4bccc;  
 
   --color-secondary: color(var(--color-primary) s(99%) l(*0.9));

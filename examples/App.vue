@@ -59,10 +59,10 @@
         <dl class="fl">
           <dt>链接</dt>
           <dd>
-            <a href="#">代码仓库</a>
+            <a href="https://github.com/boycot2015/boycotUI" target="_blank">代码仓库</a>
           </dd>
           <dd>
-            <a href="#">更新日志</a>
+            <a href="/logs">更新日志</a>
           </dd>
         </dl>
       </div>

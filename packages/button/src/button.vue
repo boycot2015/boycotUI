@@ -9,7 +9,8 @@
     'w__button--size-'+size
     ]"
   >
-    <i v-if="icon !== ''" :class="icon"></i>
+    <slot name="icon"></slot>
+    <i v-if="icon !== ''" :class="'byt-icon-'+icon"></i>
     <slot></slot>
   </button>
 </template>

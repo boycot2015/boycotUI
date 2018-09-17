@@ -14,11 +14,12 @@ a {
   color: #333;
 
 }
-body{
+body,html{
   background: #fff;
+  min-height:100%;
 }
 a:hover {
-  color: #00aeff;
+  color: $themeColor;
 }
 .fl {
   float: left;

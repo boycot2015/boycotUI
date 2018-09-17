@@ -80,13 +80,11 @@
 
 ### 使用方法
 
-直接通过设置类名为 byt-icon-iconName 来使用即可。例如：
+直接通过name属性来使用即可。例如：
 
 :::demo
 ```html
-<i class="byt-icon-edit"></i>
-<i class="byt-icon-share"></i>
-<i class="byt-icon-delete"></i>
+<byt-icon name="share"></byt-icon>
 <byt-button type="primary" icon="byt-icon-search">搜索</byt-button>
 
 ```
@@ -95,10 +93,18 @@
 ### 图标集合
 
 <ul class="icons-list clearfix">
-  <li v-for="name in icons" :key="name">
+  <li v-for="(name,index) in icons" :key="index">
     <span>
-      <i :class="'byt-icon-' + name"></i>
+      <byt-icon :name="name" color="deeppink" size="30px"></byt-icon>
       <span class="icon-name">{{'byt-icon-' + name}}</span>
     </span>
   </li>
 </ul>
+
+### Attributes
+
+| 参数      |  说明      |	类型     |	可选值     |	默认值      |
+|-------------- |------------| ------------------| ------------------| ------------------
+| name |  字体名称  |	string |	any |	——  |
+| color |  改变字体颜色  |	string |	any |	deeppink  |
+| size |  改变字体大小  |	string |	any |	16px  |

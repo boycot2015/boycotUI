@@ -112,17 +112,17 @@
   overflow-x: auto;
   background: #f2f2f2;
   .hljs-keyword {
-  color: #00aeff;
+  color: $themeColor;
   font-weight: 700;
   }
   .hljs-string {
-    color: #b46d10;
+    color: blue;
   }
   .hljs-number,.hljs-literal {
     color:green;
   }
   .hljs-tag,.hljs-attr {
-    color:#00aeff;
+    color:rgb(10, 146, 135);
   }
 }
 .language-bash,
@@ -132,6 +132,6 @@
 .language-js {
   font-family: '小篆';
   font-size:14px;
-  color: rgb(100, 99, 27) ;
+  color:rgb(10, 146, 135);
   word-spacing: 6px;
 }
